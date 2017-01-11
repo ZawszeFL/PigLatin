@@ -40,25 +40,9 @@ public String pigLatin(String sWord)
 	{
 		return sWord.substring(2)+"quay";	
 	}
-	else if(findFirstVowel(sWord) != 0 && findFirstVowel(sWord) != 1&& findFirstVowel(sWord) != 2&& findFirstVowel(sWord) != 3&& findFirstVowel(sWord) != 4)
-	{
-		return sWord.substring(5)+sWord.substring(0,5)+"ay";
-	}
-	else if(findFirstVowel(sWord) != 0 && findFirstVowel(sWord) != 1&& findFirstVowel(sWord) != 2&& findFirstVowel(sWord) != 3)
-	{
-		return sWord.substring(4)+sWord.substring(0,4)+"ay";
-	}
-	else if(findFirstVowel(sWord) != 0 && findFirstVowel(sWord) != 1&& findFirstVowel(sWord) != 2)
-	{
-		return sWord.substring(3)+sWord.substring(0,3)+"ay";
-	}
-	else if(findFirstVowel(sWord) != 0 && findFirstVowel(sWord) != 1)
-	{
-		return sWord.substring(2)+sWord.substring(0,2)+"ay";
-	}
 	else if(findFirstVowel(sWord) != 0) 
 	{
-		return sWord.substring(1)+sWord.substring(0,1)+"ay";
+		return sWord.substring(findFirstVowel(sWord))+sWord.substring(0,findFirstVowel(sWord))+"ay";
 	}
 	else
 	{
